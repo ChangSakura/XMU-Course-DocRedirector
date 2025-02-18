@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "DocRedirector",
+  "version": "1.0",
+  "description": "Detect Doc data and auto redirect & export as PDF",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://lnt.xmu.edu.cn/*",
+    "https://wps.xmu.edu.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://wps.xmu.edu.cn/weboffice/office/p/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
