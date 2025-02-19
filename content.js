@@ -68,14 +68,14 @@ async function simulateClicks() {
   try {
     // 1. 点击菜单按钮（匹配带有 kd-button-icon 类的按钮）
     await waitForElement("button.kd-button-icon");
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise(resolve => setTimeout(resolve, 500));
     const menuButton = await waitForElement("button.kd-button-icon");
     menuButton.click();
     console.log("菜单按钮已点击");
 
     // 2. 点击“导出”菜单项（匹配包含 component-menu-item、sub-menu-item、header-menu-item 的 div）
     await waitForElement("div.component-menu-item.sub-menu-item.header-menu-item");
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise(resolve => setTimeout(resolve, 500));
     const exportMenuItem = await waitForElement("div.component-menu-item.sub-menu-item.header-menu-item");
     exportMenuItem.click();
     console.log("‘导出’菜单项已点击");

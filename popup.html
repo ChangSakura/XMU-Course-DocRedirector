@@ -92,11 +92,25 @@
     input:disabled+.slider:before {
       background-color: #f5f5f5;
     }
+
+    .link {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #007BFF;
+      text-decoration: none;
+      margin-top: 5px;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <h2>DocRedirector 设置</h2>
+
   <div class="toggle-container">
     <span class="toggle-label">启用 URL 监听（自动跳转）</span>
     <label class="switch">
@@ -104,13 +118,15 @@
       <span class="slider"></span>
     </label>
   </div>
+
   <div class="toggle-container">
     <span class="toggle-label">启用下载自动化（导出 PDF）</span>
     <label class="switch">
       <input type="checkbox" id="downloadAutomationToggle">
       <span class="slider"></span>
     </label>
-  </div>
+  </div>           
+
   <div class="toggle-container">
     <span class="toggle-label">导出后自动关闭页面</span>
     <label class="switch">
@@ -118,6 +134,8 @@
       <span class="slider"></span>
     </label>
   </div>
+  <a href="https://github.com/ChangSakura/XMU-Course-DocRedirector" class="link" target="_blank">Github repo</a>
+
   <script src="popup.js"></script>
 </body>
 
