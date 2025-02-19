@@ -8,8 +8,9 @@ chrome.webRequest.onCompleted.addListener(
     chrome.tabs.get(details.tabId, (tab) => {
       if (!tab || !tab.url) return;
 
-      // 判断当前页面是否为目标页面（例如：https://lnt.xmu.edu.cn/course/*/content#/）
-      const targetPagePattern = /^https:\/\/lnt\.xmu\.edu\.cn\/course\/[^\/]+\/content#/;
+      // 判断当前页面是否为目标页面（例如：https://lnt.xmu.edu.cn/course/*）
+      const targetPagePattern = /^https:\/\/lnt\.xmu\.edu\.cn\/course\/[^\/]+/;
+
       if (!targetPagePattern.test(tab.url)) return;
 
       try {
