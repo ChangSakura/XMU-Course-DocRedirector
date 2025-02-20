@@ -46,6 +46,6 @@ chrome.webRequest.onCompleted.addListener(
   },
   {
     // 只监听 office 链接的请求（可以根据实际情况调整过滤规则）
-    urls: ["https://wps.xmu.edu.cn/weboffice/office/p/*"]
+    urls: ["https://wps.xmu.edu.cn/weboffice/office/*"]
   }
 );

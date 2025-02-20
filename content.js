@@ -98,9 +98,15 @@ async function simulateClicks() {
       return;
     }
 
-    // 4. 点击最终的导出按钮（匹配具有 export-pdf-button 类的按钮）
-    await waitForElement("button.export-pdf-button");
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // 4. 尝试点击具有 export-pdf-button 类的按钮
+    await waitForElement("button.export-pdf-button", 1, 2000).catch(async () => {
+      // 如果未找到，则尝试点击备用的导出按钮
+      const fallbackButton = await waitForElement("button.kd-button.kd-button-primary.kd-button-lg");
+      fallbackButton.click();
+      console.log("备用导出按钮已点击");
+    });
+
+    // 如果找到 export-pdf-button 按钮，点击它
     const exportButton = await waitForElement("button.export-pdf-button");
     exportButton.click();
     console.log("导出按钮已点击");

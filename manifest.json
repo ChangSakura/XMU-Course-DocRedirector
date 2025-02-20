@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://wps.xmu.edu.cn/weboffice/office/p/*"
+        "https://wps.xmu.edu.cn/weboffice/office/*"
       ],
       "js": [
         "content.js"
