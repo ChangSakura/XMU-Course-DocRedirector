@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   chrome.storage.sync.get({
     urlListenerEnabled: true,
-    downloadAutomationEnabled: false,
-    autoCloseEnabled: false
+    downloadAutomationEnabled: true,
+    autoCloseEnabled: true
   }, function (settings) {
     // 初始化开关状态
     document.getElementById('urlListenerToggle').checked = settings.urlListenerEnabled;

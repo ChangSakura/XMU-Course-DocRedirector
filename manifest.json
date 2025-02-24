@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DocRedirector",
-  "version": "1.3",
+  "version": "2.0",
   "description": "Detect Doc data and auto redirect & export as PDF",
   "permissions": [
     "webRequest",
@@ -10,7 +10,8 @@
   ],
   "host_permissions": [
     "https://lnt.xmu.edu.cn/*",
-    "https://wps.xmu.edu.cn/*"
+    "https://wps.xmu.edu.cn/*",
+    "https://c-media.xmu.edu.cn/*"
   ],
   "background": {
     "service_worker": "background.js"
