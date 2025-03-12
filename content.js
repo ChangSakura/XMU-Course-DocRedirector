@@ -86,7 +86,7 @@ async function simulateClicks() {
     const menuItems = document.querySelectorAll("div.component-menu-item.header-menu-item");
     let exportPdfItem = null;
     menuItems.forEach(item => {
-      if (item.textContent.includes("导出为 PDF")) {
+      if (item.textContent.includes("导出为 PDF") || item.textContent.includes("Export as PDF")) {
         exportPdfItem = item;
       }
     });

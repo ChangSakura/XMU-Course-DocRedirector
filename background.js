@@ -15,11 +15,11 @@ const handler1 = (details) => {
       const params = urlObj.searchParams;
 
       if (
-        params.has('_w_appid') &&
-        params.has('_w_third_appid') &&
-        params.has('_w_third_file_id') &&
-        params.has('route_key') &&
-        params.get('lang') === 'zh-CN' &&
+        // params.has('_w_appid') &&
+        // params.has('_w_third_appid') &&
+        // params.has('_w_third_file_id') &&
+        // params.has('route_key') &&
+        // params.get('lang') === 'zh-CN' &&
         params.has('simple') &&
         params.has('hidecmb') &&
         params.has('readonly')
